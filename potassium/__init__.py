@@ -3,6 +3,7 @@ import configparser
 import pywsjtx.extra.simple_server
 from pota import POTA
 
+MY_MAX_SCHEMA = 3
 config = configparser.ConfigParser()
 if not config.read("settings.ini"):
     print("Can't read settings.ini. Have you read the documentation?")
