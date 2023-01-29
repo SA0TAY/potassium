@@ -2,7 +2,9 @@
 Highlight call signs in WSJT-X which are currently spotted doing POTA.
 
 This is currently a messy proof of concept, but it will eventually be expanded
-into something more robust.
+into something more robust. At the time of writing, it hasn't even been
+thoroughly tested simply because I couldn't receive any parks when I wanted to
+do the first real world test.
 
 ## Prerequisites
 This guide assumes that you are using WSJT-X with multicast configured and
