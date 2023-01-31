@@ -29,7 +29,7 @@ while True:
                 else:
                     print("{}".format(caller))
                 colour_packet = pywsjtx.HighlightCallsignPacket.Builder(decoded_packet.wsjtx_id, caller,
-                    pywsjtx.QCOLOR.Red(),
-                    pywsjtx.QCOLOR.White(),
+                    pywsjtx.QCOLOR.Blue(),
+                    pywsjtx.QCOLOR.Yellow(),
                     True)
                 s.send_packet(addr_port, colour_packet)
