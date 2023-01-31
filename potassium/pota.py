@@ -11,6 +11,10 @@ class POTA(Thread):
 
     def run(self):
         while True:
-            apidata = requests.get("https://api.pota.app/spot/activator").json()
-            self.activators = [x["activator"] for x in apidata]
+            try:
+                apidata = requests.get("https://api.pota.app/spot/activator").json()
+                self.activators = [x["activator"] for x in apidata]
+            except:
+                print("DEBUG: Refreshing spot list failed, keeping the old one.")
+            print("DEBUG: Current spot list: {}".format(self.activators))
             sleep(60)
