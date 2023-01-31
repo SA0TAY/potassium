@@ -17,6 +17,22 @@ class QCOLOR:
         return QCOLOR(QCOLOR.SPEC_RGB, 255, 0, 0, 0)
 
     @classmethod
+    def Blue(cls):
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 0, 0, 255)
+
+    @classmethod
+    def Cyan(cls):
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 0, 255, 255)
+
+    @classmethod
+    def Green(cls):
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 0, 255, 0)
+
+    @classmethod
+    def Magenta(cls):
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 255, 0, 255)
+
+    @classmethod
     def Red(cls):
         return QCOLOR(QCOLOR.SPEC_RGB, 255, 255, 0, 0)
 
@@ -26,7 +42,11 @@ class QCOLOR:
 
     @classmethod
     def White(cls):
-        return QCOLOR(QCOLOR.SPEC_RGB, 255,255,255,255)
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 255, 255, 255)
+
+    @classmethod
+    def Yellow(cls):
+        return QCOLOR(QCOLOR.SPEC_RGB, 255, 255, 255, 0)
 
     @classmethod
     def Uncolor(cls):
