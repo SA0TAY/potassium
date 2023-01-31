@@ -19,8 +19,7 @@ and gumption to flesh this thing out a bit. Pull requests are welcome as always.
 First, copy `docs/settings.ini.example` to `settings.ini` and modify it as
 needed. Then, run `potassium/__init__.py` from the project's root directory.
 When a spotted call sign shows up as the caller on WSJT-X, this program will a)
-output the call sign on the console, b) highlight the call sign in WSJT-X using
-a nice, eye-catching blue/yellow combination.
+output the call sign on the console, b) highlight the call sign in WSJT-X in white and red.
 
 The list of spotted POTA activators is updated every 60 seconds, which seems to
 be on par with the expected API load. Please don't decrease this cooldown time.
