@@ -22,7 +22,11 @@ while True:
             reply_beat_packet = pywsjtx.HeartBeatPacket.Builder(decoded_packet.wsjtx_id,max_schema)
             s.send_packet(addr_port, reply_beat_packet)
         if type(decoded_packet) == pywsjtx.DecodePacket:
-            caller = decoded_packet.message.split()[1]
+            try:
+                caller = decoded_packet.message.split()[1]
+            except IndexError:
+                print("DEBUG: Can't split payload: {}".format(decoded_packet.message))
+                continue
             if caller in pota.activators:
                 if decoded_packet.message.split()[0] == "CQ":
                     print("{} CQ!".format(caller))
