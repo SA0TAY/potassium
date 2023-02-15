@@ -23,7 +23,7 @@ while True:
             s.send_packet(addr_port, reply_beat_packet)
         if type(decoded_packet) == pywsjtx.DecodePacket:
             try:
-                caller = decoded_packet.message.split()[1]
+                caller = decoded_packet.message.split()[1].translate(str.maketrans("", "", "<>"))
             except IndexError:
                 print("DEBUG: Can't split payload: {}".format(decoded_packet.message))
                 continue
